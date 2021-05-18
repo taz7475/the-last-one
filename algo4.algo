@@ -1,0 +1,33 @@
+ALGORITHM insert
+VAR
+    tab : ARRAY_OF INTEGER []
+    val,i,j:INTEGER
+BEGIN
+    FOR i FROM 1 TO 10  DO
+        READ(val)
+        j:=tab.length-1 //j take the last index of the tab
+        WHILE(j>0 AND tab[j]>val ) 
+            Do   
+             tab[j+1]=tab[j] 
+            j:=j-1 //
+            END_WHILE
+       //add a new colone "j+1" and translate the colones that have 
+       //a superiors value than  val  to the right
+    tab[j+1]=val
+     //finaly we add the new value at the index j+1
+               
+    END_FOR
+END
+//tab=[1,3];
+//we wanna add 2 to the table
+//j=1
+//enter to the while loop
+//tab[2]=tab[1]
+//j=0
+//END_WHILE
+//tab[1]=2
+//if we wanna add 5 to tab=[1,3]
+//j=1
+//tab[j+1]=tab[2]=5
+//if we have an emty tab
+//tab[j+1]=tab[-1+1]=tab[0]
